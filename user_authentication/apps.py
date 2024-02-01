@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ListsConfig(AppConfig):
+class UserAuthenticationConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'lists'
+    name = 'user_authentication'
