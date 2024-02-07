@@ -19,6 +19,7 @@ from django.urls import path, include
 from user_authentication import views as user_auth_views
 
 urlpatterns = [
+    path("accounts/", include("allauth.urls")),
     path("user-authentication/test-auth/",
          user_auth_views.test_authentication, name='test_authentication'),
     path('admin/', admin.site.urls),
