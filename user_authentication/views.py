@@ -6,3 +6,11 @@ from django.http import HttpResponse
 
 def test_authentication(request):
     return HttpResponse("Test user authentication")
+
+
+def home(request):
+    return render(request, 'index.html')
+
+
+def about(request):
+    return HttpResponse("About")

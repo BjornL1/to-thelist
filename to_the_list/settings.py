@@ -31,6 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-bjornl1-to-thelist-268bataoiq.us2.codeanyapp.com',
+    '8001-bjornl1-to-thelist-268bataoiq.us2.codeanyapp.com',
     '.herokuapp.com',
 ]
 
@@ -68,10 +69,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'to_the_list.urls'
 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,6 +144,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
