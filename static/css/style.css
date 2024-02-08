@@ -1,0 +1,299 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Open+Sans:wght@300;500&family=Playfair+Display:wght@600&display=swap');
+
+/* Global Styles */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: rgb(252, 247, 242);
+}
+
+.content {
+    min-height: calc(100vh - 90px);
+}
+
+.pink-text {
+    color: #886363;
+    font-weight: 300;
+}
+
+.page-title {
+    padding-top: 5px;
+    color: #886363;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Nav */
+
+.navbar {
+    padding: 1rem 1rem;
+}
+
+.navbar ul a {
+    color: #442E10;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #886363;
+}
+
+.logo-image {
+    height: 100px;
+}
+
+.profile-icon {
+    padding-right: 5px;
+}
+
+/* Home Page */
+
+.hero-text-outer {
+    background-color: #F4DDD8;
+    min-height: 200px;
+}
+
+.hero-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: #442E10;
+}
+
+.home-break {
+    border-top: 1px solid #D8B646;
+    margin: auto !important;
+}
+
+.feature-image {
+    text-align: center;
+    color: #886363;
+}
+
+.feature-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #886363;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.feature-text {
+    text-align: center;
+    font-size: 17px;
+}
+
+/* Recipe Cards */
+
+.recipe-card:hover, .mealplan-card:hover {
+    box-shadow: 0px 0px 4px #D8B646 !important;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    min-height: 250px;
+}
+
+.card-detail {
+    border: none;
+    color: #886363;
+}
+
+.recipe-detail-title {
+    font-size: 20px;
+}
+
+.recipe-detail-title:first-letter{
+    text-transform: capitalize
+}
+
+.draft {
+    color: red;
+}
+
+/* Recipe Detail Page */
+
+.recipe-title:first-letter {
+    text-transform: capitalize
+}
+
+.recipe-detail-card {
+    border: 0.5px solid #D8B646;
+}
+
+.recipe-detail-img {
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.recipe-detail-header {
+    border: none;
+    background-color: rgb(252, 247, 242);
+    color: #886363;
+}
+
+.action-buttons-outer {
+    position: absolute;
+    bottom: 15px;
+}
+
+.action-btn {
+    width: 40px;
+}
+
+.comment-action-btn a {
+    padding-left: 5px;
+    color: #128496
+}
+
+/* Add Recipe */
+
+.add-recipe input, .add-recipe textarea, .add-recipe select {
+    border: 1px solid #D8B646;
+}
+
+.add-recipe input[type=file] {
+    border: none !important;
+}
+
+.add-recipe label {
+    color: #886363;
+    font-weight: bold;
+} 
+
+.clearablefileinput {
+    color: #886363;
+    border: none
+}
+
+.add-recipe #div_id_image a {
+    color: black !important;
+}
+
+/* meal plan page */
+
+.mealplan-card .card-img-top {
+    border-bottom: 1px solid #D8B646;
+}
+
+.mp-icon {
+    text-align: center;
+    color: #F4DDD8;
+    padding-top: 60px;
+}
+
+.mealplan-card-header {
+    background-color: #F4DDD8;
+    border-bottom: 1px solid #D8B646;
+}
+
+.mealplan-title {
+    text-align: center;
+    color: #442E10;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+/* All auth templates */
+
+.signup, .login {
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 2%;
+    border: 1px solid #D8B646;
+}
+
+.signup input, .login input {
+    width: 90%;
+    border: 1px solid #D8B646;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+} 
+
+.signup label, .login label {
+    display: block;
+    text-align: center;
+    color: #442E10;
+    font-weight: bold;
+}
+
+.login label[for="id_remember"] {
+    display: inline;
+}
+
+.login #id_remember {
+    width: 20px;
+    display: inline;
+}
+
+/* Footer */
+
+.footer-container {
+    border-top: 1px #D8B646 solid !important;
+}
+
+.social-networks {
+    text-align: center;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.social-networks li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    padding: 0 30px;
+    color: #4b5054;
+}
+
+.social-networks i:hover {
+    color: #142a2b;
+}
+
+/* Media Queries */
+
+/* For Medium devices (tablets, less than 992px) */
+
+@media screen and (max-width: 991.98px) {
+    .hero-text {
+        font-size: 35px;
+    }
+  
+    .logo-image {
+        height: 75px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px */
+
+@media screen and (max-width: 767.98px) {
+    .landing-tagline {
+        width: 100%;
+    }
+    
+    .logo-image {
+        height: 70px;
+    }
+
+    .social-networks i {
+        font-size: 120%;
+        padding: 0 20px;
+    }
+
+    .card-detail {
+       width: 300px;
+    }
+
+    .mp-button, .action-btn {
+        font-size: .75rem;
+    }
+}
