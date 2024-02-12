@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from user_authentication import views as user_auth_views
+from shopping_list import views as shopping_list_views
+
 
 urlpatterns = [
     path('', user_auth_views.home, name='home'),  # Add home URL pattern
@@ -25,5 +27,9 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("user-authentication/test-auth/",
          user_auth_views.test_authentication, name='test_authentication'),
+    path('shopping_list/', shopping_list_views.shopping_list_view,
+         name='shopping_list'),
     path('admin/', admin.site.urls),
 ]
+
+# path('', include('to_the_list.urls')),
