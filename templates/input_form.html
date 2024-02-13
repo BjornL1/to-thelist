@@ -1,0 +1,8 @@
+<!-- Form for user input to create lists -->
+
+<form method="post">
+    {% csrf_token %}
+    <label for="item">Item:</label>
+    <input type="text" id="item" name="item" maxlength="100">
+    <button type="submit">Submit</button>
+</form>
