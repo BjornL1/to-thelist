@@ -10,3 +10,8 @@ class ShoppingList(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class List(models.Model):
+    list_name = models.CharField(max_length=100)
+    item_name = models.CharField(max_length=100)
