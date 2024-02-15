@@ -214,6 +214,10 @@ body {
     border: 1px solid #D8B646;
 }
 
+.list-view {
+    background-color: green;
+}
+
 .signup input,
 .login input {
     width: 90%;

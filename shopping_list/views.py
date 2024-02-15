@@ -17,7 +17,6 @@ def input_form_view(request):
     return render(request, 'input_form.html')
 
 
-
 # from django.shortcuts import render, redirect
 # from .forms import ItemForm  # Import your ItemForm
 
