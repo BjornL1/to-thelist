@@ -14,3 +14,6 @@ def home(request):
 
 def about(request):
     return HttpResponse("About")
+
+def input_form_view(request):
+    return render(request, 'input_form.html')

@@ -113,6 +113,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.codeanyapp.com',
     'https://*.herokuapp.com',
     'https://*.127.0.0.1',
+    'https://8000-bjornl1-tothelistgd-ub53wosj87f.ws-eu108.gitpod.io',
 ]
 
 AUTH_PASSWORD_VALIDATORS = [
