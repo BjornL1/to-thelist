@@ -1,12 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import ShoppingList 
+from .forms import ItemForm  # Import the ItemForm
 
 def shopping_list_view(request):
+    if request.method == 'POST':
+        # If the form is submitted
+        form = ItemForm(request.POST)  # Bind the form data to the ItemForm
+
+        if form.is_valid():
+            # If the form is valid, save the form data to create a new item
+            form.save()
+            # Redirect to the shopping list page
+            return redirect('shopping_list')
+    else:
+        # If it's a GET request, render the shopping list page with the form
+        form = ItemForm()
+
     # Retrieve all shopping list items from the database
     shopping_list = ShoppingList.objects.all()
 
-    # Render the template with the shopping list data
-    return render(request, 'shopping_list.html', {'shopping_list': shopping_list})
+    # Render the template with the shopping list data and the form
+    return render(request, 'shopping_list.html', {'shopping_list': shopping_list, 'form': form})
 
 '''
 from django.shortcuts import render, redirect

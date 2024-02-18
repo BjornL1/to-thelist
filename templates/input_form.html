@@ -1,10 +1,12 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% block content %}
 
 <!-- Form for user input to create lists -->
 <form method="post">
   {% csrf_token %}
   <label for="item">Item:</label>
-  <input type="text" class="list-view" name="item" maxlength="100" />
+  <input type="text" class="list-view" name="item" maxlength="100" required>
+  <!-- Add the 'required' attribute to make the input field mandatory -->
   <button type="submit">Submit</button>
 </form>
 {% endblock %}

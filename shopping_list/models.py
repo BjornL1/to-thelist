@@ -15,3 +15,10 @@ class ShoppingList(models.Model):
 class List(models.Model):
     list_name = models.CharField(max_length=100)
     item_name = models.CharField(max_length=100)
+
+class Item(models.Model):
+    name = models.CharField(max_length=100)
+    # Add other fields as needed
+
+    def __str__(self):
+        return self.name
