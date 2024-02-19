@@ -102,6 +102,15 @@ WSGI_APPLICATION = 'to_the_list.wsgi.application'
 #       'NAME': BASE_DIR / 'db.sqlite3',
 #   }
 # }
+
+
+# Retrieve DATABASE_URL from environment variable
+database_url = os.environ.get("DATABASE_URL")
+
+# Decode bytes if necessary
+if isinstance(database_url, bytes):
+    database_url = database_url.decode("utf-8")
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
